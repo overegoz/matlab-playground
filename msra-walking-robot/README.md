@@ -41,7 +41,7 @@ This repository contains example files for the following [MATLAB and Simulink Ro
     * `createWalkingAgent2D.m` 파일 실행
   * 기타
     * 학습 결과를 그래프로 확인 : `plotTrainingResults.m' 를 실행하고 `trainingResults_2D_mm_dd_yyyy_hhmm.mat` 파일 선택
-    * 학습 결과를 시뮬레이션으로 확인 : `trainedAgent_2D_xxx.mat' 파일을 불러오고, `walkingRobotRL2D.slx` 윈도우에서 `Run` 버튼을 클릭하면 `Mechanics Exploere-walkingRobotRL2D` 화면이 나오면서, 학습된 에이전트의 움직임이 재생됨
+    * 학습 결과를 시뮬레이션으로 확인 : `trainedAgent_2D_xxx.mat` 파일을 불러오고, `walkingRobotRL2D.slx` 윈도우에서 `Run` 버튼을 클릭하면 `Mechanics Exploere-walkingRobotRL2D` 화면이 나오면서, 학습된 에이전트의 움직임이 재생됨
 
 You can also learn more about this example from our blog posts on 
 [modeling and simulation](https://blogs.mathworks.com/racing-lounge/2017/10/11/walking-robot-modeling-and-simulation) 
