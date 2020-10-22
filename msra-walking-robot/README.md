@@ -5,7 +5,7 @@
 ## Introduction
 This repository contains example files for the following [MATLAB and Simulink Robotics Arena](https://www.mathworks.com/academia/student-competitions/roboticsarena.html) videos on walking robots.
 
-* [Basics of walking robots](https://www.mathworks.com/videos/model-based-control-of-humanoid-walking-1574399243682.html)
+* [Basics of walking robots](https://www.mathworks.com/videos/model-based-control-of-humanoid-walking-1574399243682.html) https://www.youtube.com/watch?v=jnJbXdp2wak
   * `startupWalkingRobot.m` 를 실행해서 경로를 설정하고, Simscape Multibody add-on이 필요함
   * 로봇의 움직임(관절 등등)을 모델링 하지 않고, 간단한 Linear Inverted Pendulum Model로 trajectory를 생성하고, realistic robot이 해당 trajectory를 따라가도록 디자인함
     * 간단한 Inverted Pendulum 모델을 이용해서 body의 trajectory를 만들어내고, // `applicationLIPM.lmapp`
@@ -16,8 +16,7 @@ This repository contains example files for the following [MATLAB and Simulink Ro
 * [Modeling and simulation](https://www.mathworks.com/videos/modeling-and-simulation-of-walking-robots-1576560207573.html)
 * [Trajectory optimization](https://www.mathworks.com/videos/matlab-and-simulink-robotics-arena-walking-robots-part-3-trajectory-optimization-1506440520726.html)
 * [Walking pattern generation](https://www.mathworks.com/videos/matlab-and-simulink-robotics-arena-walking-robots-pattern-generation-1546434170253.html)
-* [Deep reinforcement learning](https://www.mathworks.com/videos/matlab-and-simulink-robotics-arena-deep-reinforcement-learning-for-walking-robots--1551449152203.html)
-* [Deep reinforcement learning](https://kr.mathworks.com/videos/deep-reinforcement-learning-for-walking-robots--1551449152203.html)
+* [Deep reinforcement learning](https://kr.mathworks.com/videos/deep-reinforcement-learning-for-walking-robots--1551449152203.html) https://www.youtube.com/watch?v=6DL5M9b2j6I
 
 You can also learn more about this example from our blog posts on 
 [modeling and simulation](https://blogs.mathworks.com/racing-lounge/2017/10/11/walking-robot-modeling-and-simulation) 
