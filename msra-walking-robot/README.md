@@ -8,10 +8,11 @@ This repository contains example files for the following [MATLAB and Simulink Ro
 * [Basics of walking robots](https://www.mathworks.com/videos/model-based-control-of-humanoid-walking-1574399243682.html)
   * `startupWalkingRobot.m` 를 실행해서 경로를 설정하고, Simscape Multibody add-on이 필요함
   * 로봇의 움직임(관절 등등)을 모델링 하지 않고, 간단한 Linear Inverted Pendulum Model로 trajectory를 생성하고, realistic robot이 해당 trajectory를 따라가도록 디자인함
-    * Simple Pendulum 모델을 이용해서 body의 trajectory를 만들어내고, // `applicationLIPM.lmapp`
-    * 이를 이용해서 양쪽 다리의 trajectory를 계산하고,
-    * 이를 이용해서 양쪽 다리의 관절의 움직임을 계산 (6-degree of freedom led)
-    * 마지막으로 realistic robot을 simulate
+    * 간단한 Inverted Pendulum 모델을 이용해서 body의 trajectory를 만들어내고, // `applicationLIPM.lmapp`
+    * 이를 이용해서 양쪽 다리의 trajectory를 계산하고, // `animateLIPM.lmx`
+    * Trajectory of robot을 trajectory of feet으로 변환 // `animateLIPMLocal.mlx`
+    * trajectory of feet 을 trajectory of joints 로 변환 // `animateInverseKinematics.mlx`
+    * 마지막으로, (6-degree of freedom leg) robot을 simulate // 
 * [Modeling and simulation](https://www.mathworks.com/videos/modeling-and-simulation-of-walking-robots-1576560207573.html)
 * [Trajectory optimization](https://www.mathworks.com/videos/matlab-and-simulink-robotics-arena-walking-robots-part-3-trajectory-optimization-1506440520726.html)
 * [Walking pattern generation](https://www.mathworks.com/videos/matlab-and-simulink-robotics-arena-walking-robots-pattern-generation-1546434170253.html)
