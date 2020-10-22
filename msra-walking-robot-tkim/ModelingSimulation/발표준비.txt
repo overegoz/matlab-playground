@@ -1,0 +1,18 @@
+
+walkingRobot_step1_mechanics.slx
+- body는 고정되어 있고, 다리가 바닥에 닿지 않는 상태에서 다리의 움직임 시뮬레이션
+- 초기 상태만 설정하고 다음부터는 아무런 힘을 주지 않는 경우
+- 양 다리의 knee joint에서 damping 파라미터를 서로 다르게 설정
+- 한쪽 다리가 불편한 경우를 시뮬레이션 할 수 있음
+- Simulink 모델에서 왼/오른 다리 모듈에 들어가서, knee joint 블록에서 param을 직접 수정
+
+walkingRobot_step2_mechanics.slx
+- body는 고정되어 있고, 다리가 바닥에 닿지 않는 상태에서
+- 정해진 trajectory 에 따라서 관절을 움직이는 경우이다
+- 정해진 traj 에 따라서 관절을 움직이므로, 관절 param을 조절해도 바뀌는 것 없음
+
+walkingRobot_step2_mechanics.slx
+- 실제로 걸어다니는 경우를 시뮬레이션. 다리가 바닥에 닿음
+- 정해진 traj 에 따라서 관절을 움직이므로, 관절 param을 조절해도 바뀌는 것 없음
+- 하지만, 발과 바닥 사이의 마찰을 조절하면, 지면이 미끄럽거나, 신발 밑창의 마찰이 다른 경우 등등을 시뮬레이션 가능
+- workspace에 있는 contact_damping, contact_stiffness 변수를 제어

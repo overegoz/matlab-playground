@@ -1,0 +1,8 @@
+https://kr.mathworks.com/matlabcentral/answers/562127-is-the-error-stated-below-a-result-of-using-a-different-version-of-matlab-than-the-one-the-code-in-q
+
+1. Run the script startupWalkingRobot.m
+2. Open the simulink model named walkingRobotRL2D.slx
+3. Run the script robotParametersRL.m
+4. In the script createDDPGNetworks.m edit line 53 to critic = rlQValueRepresentation(criticNetwork,observationInfo,actionInfo,'Observation',{'observation'},'Action',{'action'},criticOptions);
+5. Also in the sript named createDDPGNetworks.m edit line 85 to actor = rlDeterministicActorRepresentation(actorNetwork,observationInfo,actionInfo,'Observation',{'observation'},'Action',{'ActorTanh1'},actorOptions);
+6. Thereafter open the script titled createWalkingAgent2D.m, select the appropriate Speedup Options for your system (lines 6-8). Once changed, run this script.

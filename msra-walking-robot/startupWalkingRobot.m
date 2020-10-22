@@ -19,4 +19,4 @@ addpath(genpath('LIPM'), ...                    % Linear inverted pendulum model
 robotParameters
 
 %% Open the README file
-edit README.md
+%edit README.md

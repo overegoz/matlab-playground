@@ -48,6 +48,7 @@ init_angs_L = zeros(6,1);
           
 %% Robot joint parameters
 joint_damping = 1;
+%joint_damping = 5;
 motion_time_constant = 0.001;
 
 %% Joint controller parameters

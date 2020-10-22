@@ -1,0 +1,24 @@
+<1>
+robotParameter.m 파일에 아래의 변수를 새로 정의함
+
+joint_damping_left = 1;
+joint_damping_right = 1;
+fprintf('joint_damping_left : %f, joint_damping_right : %f\n', ...
+        joint_damping_left, joint_damping_right);
+joint_stiffness = 0;
+joint_stiffness_left = 0;
+joint_stiffness_right = 0;
+fprintf('joint_stiffness_left : %f, joint_stiffness_right : %f\n', ...
+        joint_stiffness_left, joint_stiffness_right);
+		
+<2>		
+walkingRobotRL2D.slx > Walking Robot > Robot Leg R > Knee Joint 에서
+- Joint Stiffness랑 Joint Damping을 새로 정의한 변수랑 연결
+* Left Leg도 동일한 작업 수행
+
+<3> 
+slx 파일이 열린 상태에서
+robotParameter.m 파일 실행하고, 새로 정의한 변수를 맘대로 업데이트 하고
+normal robot에서 trained model을 저장한 mat 파일을 로드하고
+slx 파일에서 run
+

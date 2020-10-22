@@ -16,6 +16,9 @@ agentOptions.NoiseOptions.VarianceDecayRate = 1e-5;
 %% Training Options
 trainingOptions = rlTrainingOptions;
 trainingOptions.MaxEpisodes = 5000;
+%trainingOptions.MaxEpisodes = 1000;
+%trainingOptions.MaxEpisodes = 2000;
+%trainingOptions.MaxEpisodes = 3000;
 trainingOptions.MaxStepsPerEpisode = Tf/Ts;
 trainingOptions.ScoreAveragingWindowLength = 100;
 trainingOptions.StopTrainingCriteria = 'AverageReward';
