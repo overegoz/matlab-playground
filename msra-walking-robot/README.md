@@ -32,6 +32,16 @@ This repository contains example files for the following [MATLAB and Simulink Ro
   * 본 예제에서는 DDPG (deep deterministic polidy gradient)를 사용 // `Reinforcement Learning Toolbox` 를 설치해야 함
   * `walkingRobotRL2D.slx` : 상태, 보상, 종료상태확인, 강화학습 모듈, 로봇 모듈이 포함된 시뮬링크 블록 다이어그램
   * `createDDPGNetworks.m` : actor, critic 를 위한 DNN을 생성
+  * `robotParametersRL.m` : 로봇의 파라미터 설정
+  * `plotTrainingResults.m` : 학습 결과 그리기 (파일을 단독으로 실행하면, 어떤 로그 파일을 읽어올지 물어보는 화면이 나옴)
+  * 전체적인 실행 방법:
+    * `startupWalkingRobot.m` 실행
+    * `walkingRobotRL2D.slx` 파일 열기
+    * `robotParametersRL.m` 파일 실행
+    * `createWalkingAgent2D.m` 파일 실행
+  * 기타
+    * 학습 결과를 그래프로 확인 : `plotTrainingResults.m' 를 실행하고 `trainingResults_2D_mm_dd_yyyy_hhmm.mat` 파일 선택
+    * 학습 결과를 시뮬레이션으로 확인 : `trainedAgent_2D_xxx.mat' 파일을 불러오고, `walkingRobotRL2D.slx` 윈도우에서 `Run` 버튼을 클릭하면 `Mechanics Exploere-walkingRobotRL2D` 화면이 나오면서, 학습된 에이전트의 움직임이 재생됨
 
 You can also learn more about this example from our blog posts on 
 [modeling and simulation](https://blogs.mathworks.com/racing-lounge/2017/10/11/walking-robot-modeling-and-simulation) 
