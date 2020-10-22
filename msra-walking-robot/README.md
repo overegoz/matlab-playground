@@ -8,7 +8,7 @@ This repository contains example files for the following [MATLAB and Simulink Ro
 * [Basics of walking robots](https://www.mathworks.com/videos/model-based-control-of-humanoid-walking-1574399243682.html) https://www.youtube.com/watch?v=jnJbXdp2wak
   * `startupWalkingRobot.m` 를 실행해서 경로를 설정하고, Simscape Multibody add-on이 필요함
   * 처음부터 로봇의 움직임(관절 등등)을 모델링 하는 것이 아니고, 간단한 Linear Inverted Pendulum Model로 trajectory를 생성하고, 이것을 이용해서 로봇 관절의 움직임을 계산함
-    * 간단한 Inverted Pendulum 모델을 이용해서 body (=CoM, center of mass) 의 trajectory를 만들어내고, // `applicationLIPM.lmapp`
+    * 간단한 Inverted Pendulum 모델을 이용해서 body (=CoM, center of mass) 의 trajectory를 만들어내고, // `applicationLIPM.mapp`
     * 이를 이용해서 양쪽 다리의 trajectory를 계산하고, // `animateLIPM.lmx`
     * Trajectory of robot을 trajectory of feet으로 변환 // `animateLIPMLocal.mlx`
     * trajectory of feet 을 trajectory of joints 로 변환 // `animateInverseKinematics.mlx`
@@ -17,6 +17,21 @@ This repository contains example files for the following [MATLAB and Simulink Ro
 * [Trajectory optimization](https://www.mathworks.com/videos/matlab-and-simulink-robotics-arena-walking-robots-part-3-trajectory-optimization-1506440520726.html)
 * [Walking pattern generation](https://www.mathworks.com/videos/matlab-and-simulink-robotics-arena-walking-robots-pattern-generation-1546434170253.html)
 * [Deep reinforcement learning](https://kr.mathworks.com/videos/deep-reinforcement-learning-for-walking-robots--1551449152203.html) https://www.youtube.com/watch?v=6DL5M9b2j6I
+  * state : 
+    * robot doby의 위치, 회전
+    * 좌/우 leg의 joint angle 및 derivative
+    * F_R, F_L : indicator of the normal force on the left and right feet to tell you whether or not that foot is in contact with the ground
+  * action :
+    * 각각의 joint 에 가해지는 torque (= 회전력)
+  * Terminating condition : 로봇이 넘어지거나, 정해진 straight line에서 너무 많이 벗어나는 경우 등...
+  * reward : 아래의 조건을 결합하여 보상을 설계함
+    * forward reward : 전진하는 경우 `+` 보상
+    * deviation penalty : 정해진 직선에서 벗어나면 `-` 보상
+    * torque penalty : 관절의 회전각이 너무 크면 `-` 보상
+    * duration reward : 오랫동안 보행하면 `+` 보상
+  * 본 예제에서는 DDPG (deep deterministic polidy gradient)를 사용 // `Reinforcement Learning Toolbox` 를 설치해야 함
+  * `walkingRobotRL2D.slx` : 상태, 보상, 종료상태확인, 강화학습 모듈, 로봇 모듈이 포함된 시뮬링크 블록 다이어그램
+  * `createDDPGNetworks.m` : actor, critic 를 위한 DNN을 생성
 
 You can also learn more about this example from our blog posts on 
 [modeling and simulation](https://blogs.mathworks.com/racing-lounge/2017/10/11/walking-robot-modeling-and-simulation) 
