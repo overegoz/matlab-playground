@@ -29,7 +29,7 @@ end
 
 %% CREATE NEURAL NETWORKS
 createDDPGNetworks;
-                     
+pause;                     
 %% CREATE AND TRAIN AGENT
 createDDPGOptions;
 agent = rlDDPGAgent(actor,critic,agentOptions);
